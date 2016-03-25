@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>danish o'habib</title>
+    <link href="Styles/Layout.css" rel="stylesheet" />
+    <link href="Styles/hover.css" rel="stylesheet">
+    <link href="Styles/animate.css" rel="stylesheet">
+
+
+
+
+
+    <meta charset="utf-8" />
+</head>
+<body>
+
+    <header id="mainHeader">
+        <div id="socialicons">
+            <a class="hvr-float-shadow" href="https://www.facebook.com/dohabib"><img src="images/facebook.png" alt="facebook" /></a>
+            <a class="hvr-float-shadow" href="https://github.com/Danish15"><img src="images/github.png" alt="github" /></a>
+            <a class="hvr-float-shadow" href="https://ca.linkedin.com/in/danish-o-habib-92320a47?trk=prof-samename-name"><img src="images/linkedin.png" alt="linkedin" /></a>
+            <a class="hvr-float-shadow" href="https://twitter.com/DanishOHabib"><img src="images/twitter.png" alt="twitter" /></a>
+            <a class="hvr-float-shadow" href="mailto:dohabib@gmail.com"><img src="images/mail.png" alt="mail" /></a>
+        </div>
+
+        <nav class="backgroundgradient">
+            <ul>
+                <li><a class="hvr-pulse" href="index.html"> danish</a></li>
+                <li><a class="hvr-pulse" href="march2016blog.html"> blog</a></li>
+                <li><a class="hvr-pulse" href="entertainment.html"> music/movies/books</a></li>
+                <li><a class="hvr-pulse" href="projects.html"> projects</a></li>
+                <li><a class="hvr-pulse" href="travel.html"> travel</a></li>
+  
+            </ul>
+        </nav>
+    </header>
+
+    
+    <h3 class="animated fadeInUp">places i have been</h3>
+
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBZqB3vM148tEbco3Ff5pE28EiXw7o_lg&sensor=false"
+                type="text/javascript"></script>
+
+        <div id="map" class="animated pulse" style="width: 100%; height: 400px;"></div>
+
+    <script type="text/javascript">
+    var locations = [
+      ['Lahore, Pakistan', 31.5497, 74.3436, 4],
+      ['Cape Town, South Africa', -33.9253, 18.4239, 1],
+      ['Amsterdam, Holland', 52.3667, 4.9000, 3],
+      ['London, England', 51.5072, 0.1275,  5],
+      ['New York, USA', 40.7127, -74.0059, 2],
+      ['Karchi, Pakistan', 24.9, 67, 6],
+      ['Johannesburg, South Africa', -26.19, 28.03, 7],
+      ['San Jose, Costa Rica', 9.93, -84.08, 8],
+      ['Toronto, Canada', 43.66, -79.39, 9],
+      ['Detroit, USA',  42.33,-83.04, 10],
+      ['Chicago, USA', 41.88, -87.62, 11],
+      ['Boston, USA', 42.36, -71.03, 12],
+      ['Philadelphia, USA', 39.939, -75.165, 13],
+      ['Montreal, Canada', 45.50, -73.55, 14],
+      ['Ottawa, Canada', 45.431, -75.694, 15],
+      ['Kenora, Canada', 49.76, -94.48, 16],
+      ['Thunder Bay, Canada', 48.41, -89.26, 17],
+      ['Manitoulin Island, Canada', 45.70, -82.03, 18],
+      ['Sault Ste. Marie, Canada', 46.52, -84.34, 19],
+      ['Hearst, Canada', 49.42, -83.40, 20],
+      ['Timmins, Canada', 48.28, -81.20, 21],
+      ['London, Canada', 42.98, -81.24, 22],
+      ['Hamilton, Canada', 43.247, -79.869, 23],
+      ['Quebec, Canada', 46.811, -71.206, 24],
+      ['North Bay, Canada', 46.310, -79.466, 25],
+      ['Parry Island, Canada', 45.31, -80.06, 26],
+      ['Huntsville, Canada', 45.327, -79.213, 27],
+      ['Orillia, Canada', 44.606, -79.427, 28],
+      ['Washington DC, USA', 38.899, -77.036, 29],
+      ['Kingston, Canada', 44.228, -76.500, 30],
+      ['Cobourg, Canada', 43.963, -78.185, 31],
+      ['Prince Edward, Canada', 44.010, -77.293, 32],
+      ['Peterborough, Canada', 44.300, -78.319, 33],
+      ['Port Colborne, Canada', 42.881, -79.253, 34],
+      ['Fort Erie, Canada', 42.904, -78.930, 35],
+      ['Niagara Falls, Canada', 43.0894, -79.093, 36],
+      ['Islamabad, Pakistan', 33.715, 73.061, 37],
+      ['Turkey Point, Canada', 42.679, -80.332, 38],
+      ['Waterloo, Canada', 43.474, -80.529, 39],
+      ['Fort Frances, Canada', 48.610, -93.391, 40],
+    ];
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 2,
+      center: new google.maps.LatLng(15, 19),
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+
+    var infowindow = new google.maps.InfoWindow();
+
+    var marker, i;
+
+    for (i = 0; i < locations.length; i++) {
+      marker = new google.maps.Marker({
+          position: new google.maps.LatLng(locations[i][1], locations[i][2] ),
+        map: map
+      });
+
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.setContent(locations[i][0]);
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+    }
+    </script>
+
+    <div id="travel">
+        <h3 class="animated fadeInDown">pictures from my trips</h3>
+        <ul>
+            <li> <a class="animated rubberBand hvr-hang" href="#">Africa</a></li>
+            <li> <a class="animated rubberBand hvr-hang" href="#">Asia</a></li>
+            <li> <a class="animated rubberBand hvr-hang" href="#">Europe</a></li>
+            <li> <a class="animated rubberBand hvr-hang" href="#">North America</a></li>
+        </ul>
+</div>
+
+
+
+
+    </body>
+</html>
